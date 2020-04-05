@@ -6,8 +6,17 @@ import java.io.File;
 import java.net.URISyntaxException;
 
 public class FreedmanConstants {
-    String FILE_PATH = new File(Main.class.getProtectionDomain().getCodeSource().getLocation()
-            .toURI()).getPath().replace("freedman.jar", "/");
+
+    public static String FILE_PATH = "";
+
+    static {
+        try {
+            FILE_PATH = new File(Main.class.getProtectionDomain().getCodeSource().getLocation()
+                    .toURI()).getPath().replace("freedman.jar", "/");
+        } catch (URISyntaxException e) {
+            e.printStackTrace();
+        }
+    }
 
     //    public static final String FILE_PATH = "/Users/aleksandr/freedman/src/main/java/task/files/";
     public static final String STRING_RUS_FILE_PATH_1 = "rus1.txt";
