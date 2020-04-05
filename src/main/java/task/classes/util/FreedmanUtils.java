@@ -1,4 +1,4 @@
-package task.util;
+package task.classes.util;
 
 
 import com.google.common.collect.Lists;
@@ -17,7 +17,7 @@ public class FreedmanUtils {
         s2 = formatString(s2, isEng);
         if (s1.length() != s2.length())
             throw new Exception("Длина строк должна совпадать");
-        return (double) (compareStrings(s1.toLowerCase(), s2.toLowerCase())) / s1.length();
+        return ((double) (compareStrings(s1.toLowerCase(), s2.toLowerCase())) / s1.length()) * 100;
     }
 
     public static Double avgMatchIndex(String s1, String s2, Map<String, Integer> alph, boolean isEng) throws Exception {
@@ -50,7 +50,7 @@ public class FreedmanUtils {
             result = result + ((double) valuesFirst.get(i) / s1.length() *
                     ((double) valuesSecond.get(i) / s1.length()));
         }
-        return result;
+        return result * 100;
     }
 
     private static int compareStrings(String s1, String s2) {
@@ -84,7 +84,6 @@ public class FreedmanUtils {
     public static String generateRandomString(int length) {
         return RandomStringUtils.randomAlphabetic(length);
     }
-
 
 
 }

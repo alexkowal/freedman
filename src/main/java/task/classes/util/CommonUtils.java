@@ -1,4 +1,4 @@
-package task.util;
+package task.classes.util;
 
 import java.io.BufferedWriter;
 import java.io.File;

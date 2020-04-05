@@ -1,6 +1,4 @@
-package task.util;
-
-import org.apache.commons.lang3.StringUtils;
+package task.classes.util;
 
 import java.io.IOException;
 import java.util.HashMap;
@@ -8,7 +6,7 @@ import java.util.Map;
 
 import static task.constants.FreedmanConstants.ALPH_FILE_PATH;
 import static task.constants.FreedmanConstants.FILE_PATH;
-import static task.util.CommonUtils.readStringFromFile;
+import static task.classes.util.CommonUtils.readStringFromFile;
 
 public class VisionerCypherUtils {
 
